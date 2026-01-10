@@ -1,7 +1,7 @@
 
 # JavaScript
 
-Here i have practised my first java first class.
+Here i have practised my first java class.
 
 I have  created different classes so the i have got enough different classes scenarios.
 
