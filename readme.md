@@ -3,9 +3,9 @@
 
 Here i have practised my first java class.
 
-I have  created different classes so the i have got enough different classes scenarios.
+I have  created different classes so that I have got enough different classes scenarios.
 
-The class that I have practised in this js file is going though from very basic to gradually increasing its variation.
+The class that I have practised in this js file is going though from very basic to gradually increasing its variation including methods.
 
 
 
