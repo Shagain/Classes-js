@@ -13,3 +13,12 @@ The class that I have practised in this js file is going though from very basic 
 
 - [Rectange] --> which calculates the basic area and perimeter after user input length and heigh.
 
+- [] -->
+
+- [] -->
+
+- [] -->
+
+- [] -->
+
+- [] -->
