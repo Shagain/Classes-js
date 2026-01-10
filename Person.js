@@ -1,3 +1,5 @@
+
+// Personal class
 class Person {
   constructor(name, age, country) {
     this.name = name;
@@ -5,20 +7,24 @@ class Person {
     this.country = country;
   }
 
+  // display methods for person information
   display() {
-    console.log(`Person Information
-      Name: ${name} ,
-      Age: ${age} ,
-      Residency: ${country}
-      `);
+    console.log(`\t\t Person Information
+  ----------------------------------
+    Name: ${this.name} ,
+    Age: ${this.age} ,
+    Residency: ${this.country}
+    `);
   }
 
 }
 
+// three instances of Person
 let Person1 = new Person("Jame", 34, "Australia");
-let Person2 = new Person(Ashwan, 29, Nepal);
-let Person3 = new Person(Shankar, 25, Nepal);
+let Person2 = new Person("Ashwan", 29, "Nepal");
+let Person3 = new Person("Shankar", 25, "Nepal");
 
+// diplaying the person information
 Person1.display();
 Person2.display();
 Person3.display();
