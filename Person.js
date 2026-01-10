@@ -9,14 +9,13 @@ class Person {
 
   // display methods for person information
   display() {
-    console.log(`\t\t Person Information
+    console.log(`\t\t ${this.name} Information
   ----------------------------------
     Name: ${this.name} ,
     Age: ${this.age} ,
     Residency: ${this.country}
     `);
   }
-
 }
 
 // three instances of Person

@@ -14,3 +14,23 @@ class Vechile {
   }
 
 }
+
+class Car extends Vechile {
+  constructor(name, year, model, numberOfDoors) {
+    super(name, year, model);
+    this.model = model;
+    this.numberOfDoors = numberOfDoors;
+  }
+
+  display() {
+    super.display();
+    console.log(`Number of Doors : ${this.numberOfDoors}`)
+  }
+}
+
+let Car1 = new Car("Toyoya", 2010, "SUV", 4);
+let Car2 = new Car("Urus", 2019, "SUV", 4);
+
+
+Car1.display();
+Car2.display();
