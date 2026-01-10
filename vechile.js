@@ -7,8 +7,10 @@ class Vechile {
   }
 
   display() {
-
-
+    console.log(`Car 
+      name = ${this.name}
+      year = ${this.year}
+      model = ${this.model}`)
   }
 
 }

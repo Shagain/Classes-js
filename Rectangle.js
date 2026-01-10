@@ -21,6 +21,7 @@ class Rectangle {
     console.log(`Perimeter : ${this.getPerimeter()} `);
 
   }
+}
 
 
 let l = Number(prompt("Enter the lenght of the Rectangle"));
