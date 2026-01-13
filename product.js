@@ -13,8 +13,19 @@ class Product {
     this.name = name;
     this.price = price;
   }
+
+  display() {
+    console.log(`Product ID: ${productID},
+      Name: ${name},
+      Price : $${price}`);
+  }
+
   totalPrice(quantity) {
     let Fprice = this.price * quantity;
     return Fprice;
   }
+}
+
+class PersonalCareProduct extends Product {
+
 }
