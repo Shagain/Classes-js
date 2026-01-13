@@ -60,36 +60,41 @@ class University {
   }
 
   removeDepartment(id) {
+    const index = this.departments.findIndex(dep => dep.DepID === id);
 
-    for (const dep of this.departments) {
-      if (dep.DepID === id) {
-        console.log(`${id} department ID not found`);
-
-        return;
-      }
-
-      for (const dep of this.departments) {
-
-        let index = 1;
-        if (dep.DepID === id) {
-          console.log(`Department name: ${dep.DepName} with Department ID : ${dep.DepID} has been deleted succesfully`);
-          departmentList.splice(index, 1);
-
-          break;
-        }
-        index++;
-      }
-
-      console.log(`-- New list of department --`);
-
-      // for (const UpdateDep of this.departments) {
-      //   UpdateDep.display();
-      // }
-      this.displayAllDepartment();
-
+    if (index === -1) {
+      console.log(`${id} department ID not found`);
+      return;
     }
 
+    const removed = this.departments.splice(index, 1)[0];
+
+    console.log(
+      `Department name: ${removed.DepName} with Department ID: ${removed.DepID} has been deleted successfully`
+    );
+
+    console.log(`-- New list of department --`);
+    this.displayAllDepartment();
   }
+
+  // removeDepartment(id) {
+
+  //   for (const dep of this.departments) {
+  //     if (dep.DepID !== id) {
+  //       console.log(` ${id} department ID not found`);
+  //       return;
+  //     }
+
+  //     if (dep.DepID == id) {
+  //       console.log(`Department name: ${dep.DepName} with Department ID : ${dep.DepID} has been deleted succesfully`);
+  //       this.departments.splice(index, 1);
+  //       break;
+  //     }
+
+  //   }
+  //   console.log(` -- New list of department -- `);
+  //   this.displayAllDepartment();
+  // }
 }
 
 
