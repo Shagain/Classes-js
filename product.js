@@ -10,7 +10,7 @@
 class Product {
   constructor(productID, name, price) {
     this.productID = productID;
-    this.name = name;
+    this.name = name; s
     this.price = price;
   }
 
@@ -27,5 +27,17 @@ class Product {
 }
 
 class PersonalCareProduct extends Product {
+  constructor(productID, name, price, discount) {
+    super(productID, name, price);
+    this.discount = discount;
+  } s
+
+  display() {
+  }
+
+  totalPrice(quantity) {
+    let afterDiscountPrice = super.totalPrice() * this.discount;
+    return afterDiscountPrice;
+  }
 
 }
