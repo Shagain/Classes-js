@@ -16,17 +16,18 @@ class Animal {
 
 }
 
-class Dog {
+class Dog extends Animal {
   constructor(species, sound, color) {
     super(species, sound);
     this.color = color;
   }
 
   dispaly() {
-    console.log(` Species : ${this.species} makes make sound ${sound} Color: ${this.color}`);
+    console.log(` Species : ${this.species} makes make sound ${this.sound} Color: ${this.color}`);
   }
 }
 
+let Dog1 = new Dog("Wolf", "Bark", "White");
 
-
+Dog1.dispaly();
 
