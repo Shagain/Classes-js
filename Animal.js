@@ -23,6 +23,10 @@ class Dog {
   }
 
   dispaly() {
-    console.log(` Color: ${this.color}`);
+    console.log(` Species : ${this.species} makes make sound ${sound} Color: ${this.color}`);
   }
 }
+
+
+
+
