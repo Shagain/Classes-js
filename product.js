@@ -28,8 +28,9 @@ class Product {
     Name: ${this.name},
     Price : $${this.price}
     quantity: ${quantity}
-    Total price : $${this.totalPrice(quantity)}
+    Total price : $${this.price * quantity}
     `);
+    // Total price : $${this.totalPrice(quantity)}
   }
 }
 
@@ -49,12 +50,22 @@ class PersonalCareProduct extends Product {
     return afterDiscountPrice;
   }
 
+  totalSave() {
+    const total = super.totalPrice(quantity);
+    const discountAmount = (total * this.discount) / 100;
+
+    return discountAmount;
+  }
+
   display() {
     super.display();
     console.log(`-----Price After Discount ------
 
     Discount Rate: ${this.discount}%
-    price after Discount $${this.totalPrice(quantity)}`);
+    price after Discount $${this.totalPrice(quantity)}
+    -----------------------------------------
+          Total save : $${this.totalSave()}
+    -----------------------------------------` );
   }
 }
 
