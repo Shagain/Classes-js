@@ -15,3 +15,14 @@ class Animal {
   }
 
 }
+
+class Dog {
+  constructor(species, sound, color) {
+    super(species, sound);
+    this.color = color;
+  }
+
+  dispaly() {
+    console.log(` Color: ${this.color}`);
+  }
+}
