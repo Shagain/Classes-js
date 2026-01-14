@@ -35,6 +35,10 @@ class PersonalCareProduct extends Product {
   display() {
   }
 
+  // discount(discount) {
+
+  // }
+
   totalPrice(quantity) {
     let afterDiscountPrice = super.totalPrice() * this.discount;
     return afterDiscountPrice;
