@@ -40,8 +40,10 @@ class PersonalCareProduct extends Product {
   // }
 
   totalPrice(quantity) {
-    let afterDiscountPrice = super.totalPrice() * this.discount;
+    let afterDiscountPrice = super.totalPrice() * this.discount / 100;
     return afterDiscountPrice;
   }
+
+
 
 }
