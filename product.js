@@ -7,43 +7,58 @@
 //   discount%. Create an instance of the PersonalCareProduct class and
 //    calculate its total price.
 
+
+const quantity = 100;
+
 class Product {
   constructor(productID, name, price) {
     this.productID = productID;
-    this.name = name; s
+    this.name = name;
     this.price = price;
   }
 
-  display() {
-    console.log(`Product ID: ${productID},
-      Name: ${name},
-      Price : $${price}`);
+  totalPrice(quantity) {
+    const Fprice = this.price * quantity;
+    return Fprice;
   }
 
-  totalPrice(quantity) {
-    let Fprice = this.price * quantity;
-    return Fprice;
+  display() {
+    console.log(`-----Price Before Discount ------
+    Product ID: ${this.productID},
+    Name: ${this.name},
+    Price : $${this.price}
+    quantity: ${quantity}
+    Total price : $${this.totalPrice(quantity)}
+    `);
   }
 }
 
+
 class PersonalCareProduct extends Product {
+
   constructor(productID, name, price, discount) {
     super(productID, name, price);
     this.discount = discount;
-  } s
-
-  display() {
   }
 
-  // discount(discount) {
-
-  // }
-
   totalPrice(quantity) {
-    let afterDiscountPrice = super.totalPrice() * this.discount / 100;
+    const total = super.totalPrice(quantity);
+    const discountAmount = (total * this.discount) / 100;
+    const afterDiscountPrice = total - discountAmount;
+    console.log(`---after  ${total}----`);
     return afterDiscountPrice;
   }
 
+  display() {
+    super.display();
+    console.log(`-----Price After Discount ------
 
-
+    Discount Rate: ${this.discount}%
+    price after Discount $${this.totalPrice(quantity)}`);
+  }
 }
+
+
+let PersonalCareProduct1 = new PersonalCareProduct("S-001", "Shampoo", 12, 12.5);
+
+PersonalCareProduct1.display();
